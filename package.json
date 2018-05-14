@@ -1,0 +1,46 @@
+{
+  "name": "express-mysql-jwt",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "babel src -d es5",
+    "start": "babel-node ./src/bootstrap.js",
+    "start:es5": "npm run-script build && node ./es5/bootstrap.js",
+    "sequelize": "./node_modules/.bin/sequelize",
+    "db:migrate": "sequelize db:migrate",
+    "db:seed": "sequelize db:seed",
+    "lint": "eslint --ext .js src test"
+  },
+  "author": "ming <htc88433755@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "http-errors": "^1.6.3",
+    "jsonwebtoken": "^8.2.1",
+    "lodash": "^4.17.5",
+    "morgan": "^1.9.0",
+    "mysql2": "^1.5.3",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "pbkdf2": "^3.0.14",
+    "pug": "^2.0.3",
+    "sequelize": "^4.37.6",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "sequelize-cli": "^4.0.0"
+  }
+}
